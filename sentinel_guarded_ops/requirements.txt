@@ -1,0 +1,2 @@
+# Pinned for reproducibility; pyproject.toml carries the supported range.
+crewai[tools]==1.15.34
