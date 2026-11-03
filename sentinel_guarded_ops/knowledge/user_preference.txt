@@ -1,0 +1,6 @@
+Demo organization preferences (sample knowledge file, edit freely):
+
+- Operations reports are written in plain language, one action per section.
+- Held actions are listed before executed ones: anything waiting on a human
+  approver is the most important part of the report.
+- Vendor payments are never urgent enough to skip the Sentinel gate.
