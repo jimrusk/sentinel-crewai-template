@@ -1,10 +1,17 @@
-# Sentinel Guarded Ops — CrewAI Marketplace Template
+# Sentinel Guarded Ops, CrewAI Marketplace Template
 
 **Title:** Sentinel Guarded Ops
 **Category:** Security & Compliance
 **Type:** Crew (classic Python/YAML layout, per `crewAIInc/marketplace-crew-template`)
 **Author:** Aridon (Triple R Restoration, LLC dba Aridon)
 **License:** MIT
+
+**Sentinel is the action-control platform for AI agents.**
+
+- **Live demo:** https://aridon-v02.vercel.app/sentinel-demo
+- **Paper:** Sentinel and NetGuard design paper, Zenodo,
+  https://doi.org/10.5281/zenodo.23920785
+- **MCP server:** https://github.com/jimrusk/sentinel-mcp
 
 ## Description
 
@@ -13,7 +20,7 @@ Aridon's pre-execution authorization layer for AI agents, **before** it
 executes. Sentinel returns **allow**, **hold** (a human must approve first),
 or **deny**, and records every decision in a SHA-256 hash-chained audit log.
 
-The crew's Operations Action Specialist processes three sample actions — a
+The crew's Operations Action Specialist processes three sample actions, a
 benign report summary (allowed, executes), a vendor payment (held:
 consequential actions need a human approver even at zero content risk), and a
 simulated hostile request (denied, never executes). Its only execution tool
@@ -27,14 +34,15 @@ an independent action gate, trajectory analysis, hash-chained audit), and the
 included standalone test reproduces the MCP server's smoke-test results
 exactly.
 
-**Honest stage:** Sentinel is a development-stage technical preview,
-validated in internal synthetic testing only (Sep 2026 harness: 18/18
-scenarios, 13/13 hostile actions held pre-execution, 0 false positives). No
-customers, no revenue, no independent penetration test, no SOC 2. Every
+**Stage and results:** In Sentinel's internal test harness (Sep 2026,
+internal synthetic testing): 18/18 scenarios passed, 13 hostile actions held
+before execution, 0 false positives. Sentinel is in early access, and we are
+opening design-partner pilot conversations now. The evaluation has not had
+an independent penetration test and carries no SOC 2 certification. Every
 execution in this template is a mock.
 
 Metadata for the submission form also lives in [`template.json`](template.json).
-The crew itself — installation, configuration, usage, limitations — is
+The crew itself (installation, configuration, usage, limitations) is
 documented in [`sentinel_guarded_ops/README.md`](sentinel_guarded_ops/README.md).
 
 ## Repository layout
@@ -55,7 +63,7 @@ sentinel-crewai-template/
         └── tools/
             ├── sentinel_gate.py    (ported Sentinel engine + audit chain)
             ├── sentinel_tools.py   (sentinel_evaluate_action, sentinel_audit_status)
-            └── guarded_actions.py  (execute_guarded_action — gate-enforced mock executor)
+            └── guarded_actions.py  (execute_guarded_action, gate-enforced mock executor)
 ```
 
 ## How to submit to the CrewAI Marketplace
@@ -73,9 +81,9 @@ Per the instructions at https://marketplace.crewai.com (checked 2026-11-02):
 5. Review: initial screening (1–3 days), technical review (1–2 weeks),
    possible feedback, final decision. Submission is free.
 
-**This repository has NOT been pushed to GitHub and nothing has been
-submitted.** Those steps require Aridon's GitHub account and a form
-submission in Aridon's name — see BUILD-REPORT.md.
+**Status:** this repository is public on GitHub, and the template has been
+submitted to the CrewAI Marketplace. See BUILD-REPORT.md for the build and
+verification record.
 
 ## Production note
 
