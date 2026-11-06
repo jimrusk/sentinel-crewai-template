@@ -70,7 +70,7 @@ sentinel-crewai-template/
 
 Per the instructions at https://marketplace.crewai.com (checked 2026-11-02):
 
-1. Fork the official template repository that matches the use case —
+1. Fork the official template repository that matches the use case:
    for a crew, `crewAIInc/marketplace-crew-template` (this project already
    follows its structure).
 2. Push your template to GitHub.
